@@ -10,3 +10,4 @@ A repository where I attempt to learn a bit more about the programming language 
 - [Fireship's Learn Go in 100 lines](https://fireship.io/lessons/learn-go-in-100-lines/)
 - [Tutorial Point's Go Tutorial](https://www.tutorialspoint.com/go/index.htm)
 - [GoByExample Tutorials](https://gobyexample.com/)
+- [Jake Wright's Learn Go in 12 Minutes](https://www.youtube.com/watch?v=C8LgvuEBraI)
