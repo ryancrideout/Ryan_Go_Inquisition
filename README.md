@@ -14,3 +14,13 @@ A repository where I attempt to learn a bit more about the programming language 
 - [Go by Example](https://gobyexample.com/) - Great resource for breaking down terms individually.
 - [Gophercises](https://gophercises.com/) - Something to do AFTER you've looked at other tutorials.
 - [Coursera Go Courses](https://ca.coursera.org/courses?query=golang)
+
+Windows (not really supported due to not being POSIX):
+  - Note: It is discouraged to attempt to run beehive natively on a Windows environment; if you're insistent it is recommended you use WSL 2 (Linux Subsystem for Windows). 
+```powershell
+1. Get Chrome version
+2. Invoke-WebRequest -Uri https://chromedriver.storage.googleapis.com/$VERSION/chromedriver_win32.zip -OutFile chromedriver_win32.zip
+3. Extract, and run the EXE inside
+4. ???
+5. Profit
+```
