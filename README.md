@@ -11,3 +11,6 @@ A repository where I attempt to learn a bit more about the programming language 
 - [Tutorial Point's Go Tutorial](https://www.tutorialspoint.com/go/index.htm)
 - [GoByExample Tutorials](https://gobyexample.com/)
 - [Jake Wright's Learn Go in 12 Minutes](https://www.youtube.com/watch?v=C8LgvuEBraI)
+- [Go by Example](https://gobyexample.com/) - Great resource for breaking down terms individually.
+- [Gophercises](https://gophercises.com/) - Something to do AFTER you've looked at other tutorials.
+- [Coursera Go Courses](https://ca.coursera.org/courses?query=golang)
