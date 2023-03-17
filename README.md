@@ -4,6 +4,8 @@ A repository where I attempt to learn a bit more about the programming language 
 ## Go Resources:
 - [Install Go](https://go.dev/doc/install)
 - [Go Wikipedia Page](https://en.wikipedia.org/wiki/Go_(programming_language))
+- [Official Go Documentation](https://go.dev/)
+- [Official Go Best Practices](https://go.dev/doc/effective_go)
 
 ## Useful Tutorial Links:
 - [Fireship's Go in 100 seconds](https://www.youtube.com/watch?v=446E-r0rXHI)
