@@ -6,6 +6,7 @@ A repository where I attempt to learn a bit more about the programming language 
 - [Go Wikipedia Page](https://en.wikipedia.org/wiki/Go_(programming_language))
 - [Official Go Documentation](https://go.dev/)
 - [Official Go Best Practices](https://go.dev/doc/effective_go)
+- [Unofficial Go Project Layout Practices](https://github.com/golang-standards/project-layout)
 
 ## Useful Tutorial Links:
 - [Fireship's Go in 100 seconds](https://www.youtube.com/watch?v=446E-r0rXHI)
