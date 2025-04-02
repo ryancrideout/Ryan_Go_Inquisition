@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  go_react:
+    container_name: go_react
+    hostname: go_react
+    image: go_react
+    ports:
+      - '8080:8080'
+    command: sleep infinity
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/opt/go_react
