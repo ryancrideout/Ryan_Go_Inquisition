@@ -5,10 +5,13 @@ services:
     hostname: go_react
     image: go_react
     ports:
-      - '8080:8080'
+      - '5173:5173'
     command: sleep infinity
+    # command: npm run dev -- --host 0.0.0.0  # Assuming you're using Vite's dev server
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./:/opt/go_react
+    environment:
+      - HOST=0.0.0.0 # This ensures the dev server binds to all network interfaces
