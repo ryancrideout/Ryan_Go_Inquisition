@@ -9,3 +9,8 @@ Instructions:
 3) Framework: React
 4) Variant: TypeScript
 ```
+
+To run the web server from the docker image:
+```
+npm run dev -- --host 0.0.0.0 
+```
