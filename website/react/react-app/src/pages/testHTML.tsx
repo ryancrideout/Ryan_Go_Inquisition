@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import Pagination from '../Pagination';
-import data from './data/mock-data.json';
+import data from '../../data/mock-data.json';
 
 // const TestHTML = () => (
 //     <div>
@@ -32,7 +32,7 @@ function TestHTML() {
             </tr>
           </thead>
           <tbody>
-            {data.map(item => {
+            {currentTableData.map(item => {
               return (
                 <tr>
                   <td>{item.id}</td>

@@ -4,7 +4,7 @@ FROM node:22-alpine
 WORKDIR /opt/go_react/react/react-app
 RUN npm install bootstrap@5.2.3
 RUN npm install react-router-dom
-RUN npm install classnames
+RUN npm install classnames --save
 
 EXPOSE 5173
 

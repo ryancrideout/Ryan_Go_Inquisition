@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { usePagination, DOTS } from './components/usePagination';
+import { UsePagination, DOTS } from './components/usePagination';
 
 const Pagination = props => {
     const {
@@ -12,12 +12,12 @@ const Pagination = props => {
       className
     } = props;
 
-const paginationRange = usePagination({
-    currentPage,
-    totalCount,
-    siblingCount,
-    pageSize
-});
+    const paginationRange = UsePagination({
+        currentPage,
+        totalCount,
+        siblingCount,
+        pageSize
+    });
 
   // If there are less than 2 times in pagination range we shall not render the component
   if (currentPage === 0 || paginationRange.length < 2) {
