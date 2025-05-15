@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import Pagination from '../Pagination';
 import data from '../../data/mock-data.json';
+import '../App.css'
 
 // const TestHTML = () => (
 //     <div>
