@@ -3,12 +3,6 @@ import Pagination from '../Pagination';
 import data from '../../data/mock-data.json';
 import '../App.css'
 
-// const TestHTML = () => (
-//     <div>
-//         <h1>Test HTML, they call me the Shoryuken King</h1>
-//     </div>
-// );
-
 let PageSize = 10;
 
 function TestHTML() {
