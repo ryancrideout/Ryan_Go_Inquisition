@@ -10,8 +10,24 @@ services:
     # command: npm run dev -- --host 0.0.0.0  # Assuming you're using Vite's dev server
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: go_react.Dockerfile
     volumes:
       - ./:/opt/go_react
     environment:
       - HOST=0.0.0.0 # This ensures the dev server binds to all network interfaces
+
+  scrapers:
+    container_name: scrapers
+    hostname: scrapers
+    image: scrapers
+    ports:
+      - '5174:5174'
+    command: sleep infinity
+    build:
+      context: .
+      dockerfile: scrapers.Dockerfile
+    volumes:
+      - ./:/opt/scrapers
+    environment:
+      - HOST=0.0.0.0 # This ensures the dev server binds to all network interfaces
+      - PORT=5174
