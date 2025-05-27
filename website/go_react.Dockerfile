@@ -9,4 +9,4 @@ RUN npm install -D sass
 
 EXPOSE 5173
 
-WORKDIR /opt/go_react
+WORKDIR /opt/go_react/react/react-app

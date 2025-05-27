@@ -6,7 +6,7 @@ services:
     image: go_react
     ports:
       - '5173:5173'
-    command: sleep infinity
+    command: npm run dev -- --host 0.0.0.0
     # command: npm run dev -- --host 0.0.0.0  # Assuming you're using Vite's dev server
     build:
       context: .
