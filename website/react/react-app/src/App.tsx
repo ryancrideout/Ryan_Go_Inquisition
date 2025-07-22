@@ -27,7 +27,7 @@ const JsonEndpoint = ({ endpoint }: {endpoint: string}) => {
 function App() {
     // Mock values to help with the endpoint setup.
     const letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    const numbers = Array.from({length: 100}, (_, i) => i + 1);
+    const numbers = Array.from({length: 1000}, (_, i) => i + 1);
     const categories = ['users', 'products', 'orders', 'analytics', 'reports', 'settings'];
 
     return (
