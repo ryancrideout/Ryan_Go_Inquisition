@@ -6,4 +6,6 @@ RUN apt update && apt -y upgrade && apt install -y curl locales && locale-gen en
 RUN curl -o go.tar.gz https://dl.google.com/go/go1.24.3.linux-amd64.tar.gz && tar -xf go.tar.gz
 ENV PATH=$PATH:/go/bin
 
+EXPOSE 8080
+
 WORKDIR /opt/json_server/json_server

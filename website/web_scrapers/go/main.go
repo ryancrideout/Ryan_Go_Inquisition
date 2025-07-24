@@ -9,8 +9,15 @@ import (
 )
 
 func main() {
+	// How to test:
+	/*
+		response, err := http.Get("http://json-server:8080/endpoint1")
+		// Returns pure JSON, no JavaScript needed
+	*/
+
 	// URL to request
-	hostURL := "http://go_react:5173/"
+	// hostURL := "http://go_react:5173/"
+	hostURL := "http://json_server:8080/"
 	for i := 1; i < 11; i++ {
 		urlToVisit := fmt.Sprintf("%sendpoint%s", hostURL, strconv.Itoa(i))
 		//fmt.Println(urlToVisit)
@@ -24,11 +31,17 @@ func main() {
 		// fmt.Println(response.StatusCode) // 404?
 
 		client := &http.Client{}
-		request, _ := http.NewRequest("GET", urlToVisit, nil)
+		request, err := http.NewRequest("GET", urlToVisit, nil)
+		if err != nil {
+			panic(err)
+		}
 		request.Header.Set("User-Agent", "Mozilla/5.0 (compatible; Go-http-client/1.1)")
 		request.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
 
 		response, err := client.Do(request)
+		if err != nil {
+			panic(err)
+		}
 
 		body, err := io.ReadAll(response.Body)
 		if err != nil {
