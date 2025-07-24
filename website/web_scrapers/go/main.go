@@ -1,12 +1,11 @@
 package main
 
 import (
-	"context"
 	"fmt"
+	"io"
+	"net/http"
 	"strconv"
-	"time"
-
-	"github.com/chromedp/chromedp"
+	// "github.com/chromedp/chromedp"
 )
 
 func main() {
@@ -14,32 +13,29 @@ func main() {
 	hostURL := "http://go_react:5173/"
 	for i := 1; i < 11; i++ {
 		urlToVisit := fmt.Sprintf("%sendpoint%s", hostURL, strconv.Itoa(i))
+		//fmt.Println(urlToVisit)
 
-		// Create a Chrome instance
-		ctx, cancel := chromedp.NewContext(context.Background())
-		defer cancel()
+		// Simple GET request:
+		// response, err := http.Get(urlToVisit)
+		// if err != nil {
+		// 	panic(err)
+		// }
+		// defer response.Body.Close()
+		// fmt.Println(response.StatusCode) // 404?
 
-		// Create a timeout
-		ctx, cancel = context.WithTimeout(ctx, 15*time.Second)
-		defer cancel()
+		client := &http.Client{}
+		request, _ := http.NewRequest("GET", urlToVisit, nil)
+		request.Header.Set("User-Agent", "Mozilla/5.0 (compatible; Go-http-client/1.1)")
+		request.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
 
-		// Navigate to the page and wait for it to load
-		var htmlContent string
-		err := chromedp.Run(ctx,
-			chromedp.Navigate(urlToVisit),
-			// Wait for the React app to render (adjust selector as needed)
-			chromedp.WaitVisible("#root > *"),
-			// Get the page content after JavaScript execution
-			chromedp.OuterHTML("html", &htmlContent),
-		)
+		response, err := client.Do(request)
 
+		body, err := io.ReadAll(response.Body)
 		if err != nil {
-			fmt.Printf("Error: %v\n", err)
-			return
+			panic(err)
 		}
 
-		fmt.Println(htmlContent)
-
+		fmt.Println(string(body))
 	}
 
 	// // "github.com/chromedp/chromedp"

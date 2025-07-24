@@ -31,3 +31,13 @@ services:
     environment:
       - HOST=0.0.0.0 # This ensures the dev server binds to all network interfaces
       - PORT=5174
+
+  json_server:
+    container_name: json_server
+    hostname: json_server
+    build:
+      context: .
+      dockerfile: json_server.Dockerfile
+    ports:
+      - '8080:8080'
+    command: go run main.go
